@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Location Explorer</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="locationlocationlocation.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://developer.yahoo.com/yui/build/reset/reset.css" />
+	<style>
+    #controls {
+        width: 100%;
+        background-color: #eee;
+        color: #333;
+        border-bottom: 1px solid #333;
+        padding: 5px;
+    }
+    .location {
+        display: inline-block;
+    }
+    #map {
+        background-color: #eee;
+        width: 100%;
+    }
+    em {
+        font-weight: bold; 
+    }
+	</style>
+</head>
+<body>
+
+<div id="controls">
+    <div>
+        <input id="address" type="textbox" value="" size="50" onkeydown="if (event.keyCode==13) document.getElementById('search').click()" />
+        <input id="search" type="submit" name="Search" value="Search" class="button" onclick="code()" />
+        <div class="location"><em>Lat:</em> <span id="lat">&nbsp;</span></div>
+        <div class="location"><em>Lng:</em> <span id="lng">&nbsp;</span></div>
+    </div>
+</div>
+
+<div id="map">
+</div>
+
+</body>
+</html>
